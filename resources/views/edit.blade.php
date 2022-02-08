@@ -13,8 +13,8 @@
     </label>
     <label>
         Color <br>
-        <input type="radio" name="color" value="Blanca" checked={{ $espada->color == "Blanca" }}/>  <label>Blanca</label> <br>
-        <input type="radio" name="color" value="Negra" checked={{ $espada->color == "Negra" }}/>  <label>Negra</label><br>
+        <input type="radio" name="color" value="Blanca" checked={{ old('color', $espada->color) == "Blanca" }}/>  <label>Blanca</label> <br>
+        <input type="radio" name="color" value="Negra" checked={{ old('color', $espada->color) == "Negra" }}/>  <label>Negra</label><br>
     </label>
     <label>
         Creacion
@@ -28,13 +28,8 @@
         Herrero:
     </label>
     <select name="herrero">
-    @if ($espada->herrero == "Andre")
-    <option value="Andre" selected>Andre</option>
-    <option value="Godo">Godo</option>
-    @else
-    <option value="Andre">Andre</option>
-    <option value="Godo" selected>Godo</option>
-    @endif
+    <option value="Andre" selected={{ old('herrero', $espada->herrero) == "Andre" }}>Andre</option>
+    <option value="Godo" selected={{ old('herrero', $espada->herrero) == "GOdo" }}>Godo</option>
     </select><br>
     <label>
         Longitud

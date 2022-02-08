@@ -12,8 +12,8 @@
     </label>
     <label>
         Color <br>
-        <input type="radio" name="color" value="Blanca"/>  <label>Blanca</label> <br>
-        <input type="radio" name="color" value="Negra"/>  <label>Negra</label><br>
+        <input type="radio" name="color" value="Blanca" checked={{ old('color') == "Blanca" }}/>  <label>Blanca</label> <br>
+        <input type="radio" name="color" value="Negra" checked={{ old('color') == "Negra" }}/>  <label>Negra</label><br>
     </label>
     <label>
         Creacion
@@ -27,8 +27,8 @@
         Herrero:
     </label>
     <select name="herrero">
-        <option value="Andre">Andre</option>
-        <option value="Godo">Godo</option>
+        <option value="Andre" selected={{ old('herrero') == "Andre" }}>Andre</option>
+        <option value="Godo" selected={{ old('herrero') == "GOdo" }}>Godo</option>
     </select><br>
     <label>
         Longitud
