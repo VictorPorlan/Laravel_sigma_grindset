@@ -24,7 +24,7 @@
         <textarea name="descripcion" value="{{ old('descripcion') }}"></textarea><br>
     </label>
     <label>
-        Herrero:
+        {{ __('Blacksmith') }}
     </label>
     <select name="herrero">
         <option value="Andre" selected={{ old('herrero') == "Andre" }}>Andre</option>
